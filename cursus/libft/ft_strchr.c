@@ -17,11 +17,11 @@ char	*ft_strchr(const char *str, int ch)
 	int	i;
 
 	i = 0;
-	while (((char *)str)[i] != '\0')
+	while (str[i] != '\0')
 	{
-		if (((char *)str)[i] == ch)
-			return (((char *)str)[i]);//aquí devolvemos la primera coincidencia
+		if (str[i] == ch)
+			return (&((char *)str)[i]);//aquí devolvemos la primera coincidencia
 		i++;
 	}
-	return (((char *)str)[i]);//esta posición lleva al '\0'
+	return ((char *)(str + i));//esta posición lleva al '\0'
 }

@@ -12,13 +12,16 @@
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	
-}
+	void	*result;
 
-
-int	main(void)
-{
-	char x[5] = calloc(5, 5);
+	result = malloc(nmemb * size);
+	if (!result)//tiene 0 posiciones (nmemb=0 || size=0) pues devuelvo un puntero a NULL
+		return (NULL);
+	else
+	{
+		ft_bzero(result, (nmemb * size));
+		return (result);
+	}
 }

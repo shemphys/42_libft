@@ -15,13 +15,15 @@
 void *ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
+	const char	*str;
 
 	i = 0;
+	str = s;
 	while (i < n)
 	{
-		if (((unsigned char *)s)[i] == (unsigned char)c) 
-			return ((void *)&s[i]);//no puedo modificar el valor de s como tal porque es un const void
+		if (str[i] == (unsigned char)c) 
+			return ((unsigned char *)&str[i]);//no puedo modificar el valor de s como tal porque es un const void
 		i++;								//tampoco puedo return it, cuz void* functions don't return const nor volatile.
 	}
-	return (NULL);
+	return (0);
 }

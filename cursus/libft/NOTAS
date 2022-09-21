@@ -33,3 +33,7 @@ ESTUDIAR
 	Básicamente, pueden apuntar a cualquier variable que no haya sido declarada
 	con "const" o "volatile".
 	Puede convertirse en cuaquier otro tipo de puntero (char*, int*...).
+--------------------------------------------------------------------------------
+							GNU MAKE
+		https://www.gnu.org/software/make/manual/make.html
+--------------------------------------------------------------------------------

@@ -12,28 +12,29 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *to, const void *from, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
-	if (to > from)
+	if (dest > src)
 	{
 		i = 0;
 		while (i < n)
 		{
-			((unsigned char *)to)[i] = ((unsigned char *) from);
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 			i++;
 		}
 	}
 	else
 	{
-		i = n - 1;
-		while (i >= 0)
+		i = n;//no puedo hacer comparaciones en las que un size_t sea menor que 0.
+		while (i > 0)
 		{
-			((unsigned char *)to)[i] = ((unsigned char *)from)[i];
-			i--;
+			i--;//lo resto antes porque tengo que usar 0
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		}
 	}
+	return ((void *)dest);
 }
 /*
 #include <string.h>

@@ -14,13 +14,13 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	size_t	i = ft_strlen(str) - 1;//el -1 nos da la posición del fin de cadena.
+	size_t	i = ft_strlen(str);
 
-	while (i >= 0)
+	while (i > 0)
 	{
-		if (((char *)str)[i] == c)
-			return (((char *)str)[i]);
 		i--;
+		if (((char *)str)[i] == c)
+			return (&((char *)str)[i]);
 	}
 	return (NULL);//devuelve nulo.
 }

@@ -34,7 +34,7 @@ int	ft_atoi(const char *str)
 	}
 	return (res * menoss);
 }
-
+/*
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -46,3 +46,4 @@ int main(void)
 	int y = ft_atoi(b);
 	int x = atoi(b);
 }
+*/

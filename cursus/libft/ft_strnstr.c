@@ -18,20 +18,20 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;//contador para needle
 
 	i = 0;
-	if ((char *)needle[0] == '\0')
+	if (needle[0] == '\0')
 		return ((char *)haystack);
-	while (i < len && (char *)haystack[i] != '\0')
+	while (i < len && haystack[i] != '\0')
 	{
 		j = 0;
-		while ((char *)needle[j] != '\0')
+		while (needle[j] != '\0')
 		{
-			if ((char *)haystack[i] == (char *)needle[j])
+			if (haystack[i] == needle[j])
 				j++;
 			else
 				break;
 		}
-		if (j = ft_strlen(needle))//quiere decir que ha iterado hasta el '\0' por lo tanto no tengo que restar 1 al ft_strlen
-			return (haystack[i]);
+		if (j == ft_strlen(needle))//quiere decir que ha iterado hasta el '\0' por lo tanto no tengo que restar 1 al ft_strlen
+			return ((char *)&haystack[i]);
 		i++;
 	}
 	return (NULL);

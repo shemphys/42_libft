@@ -18,7 +18,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	srclen;
 
-	if (src != '\0' && dst != '\0' && dstsize != 0)//checking 1st positions and dstsize
+	i = 0;
+	if (src[i] != '\0' && dst[i] != '\0' && dstsize != 0)//checking 1st positions and dstsize
 	{
 		srclen = ft_strlen(src);
 		i = 0;

@@ -20,7 +20,7 @@ int		ft_isdigit(int c);//comentarios
 int		ft_isalnum(int c);//comentarios
 int		ft_isascii(int c);//comentarios
 int		ft_isprint(int c);//comentarios
-int		ft_strlen(const char *str);//comentarios
+size_t	ft_strlen(const char *str);//comentarios
 void	*ft_memset(void *to, int ch, unsigned int n);//comentarios
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *to, const void *from, size_t n);//comentarios
