@@ -26,16 +26,6 @@ SRC = ft_atoi.c\
 			ft_memcmp.c\
 			ft_strnstr.c\
 			ft_calloc.c\
-			ft_strdup.c\
-			ft_substr.c\
-			ft_strjoin.c\
-			ft_putchar_fd.c\
-			ft_putstr_fd.c\
-			ft_putnbr_fd.c\
-			ft_putendl_fd.c\
-			ft_strtrim.c\
-			ft_itoa.c\
-			ft_strmapi.c\
 
 OBJS = $(SRC:.c=.o)
 
@@ -44,10 +34,10 @@ all: $(NAME)#aquí podría poner libft.a y quitar la variable NAME
 $(NAME): $(OBJS)
 	ar crs $(NAME) $(OBJS)
 
-clean:
+clean:#solo borra los .o
 	$(RM) $(OBJS)
 
-fclean: clean
+fclean: clean#borra todo, incluido el libft.a
 	$(RM) $(NAME)
 
 re: clean all

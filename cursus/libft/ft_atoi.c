@@ -18,18 +18,21 @@ int	ft_atoi(const char *str)
 	int			res;
 	int			menoss;
 
+	res = 0;
 	i = 0;
 	menoss = 1;
 	while ((str[i] >= '\t' && str[i] <= '\r') || str[i] == ' ')
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		menoss = -1;
+		if (str[i] == '-')
+			menoss = -1;
 		i++;
 	}
+	
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = (str[i] - '0') + (res * 10);
+		res = (str[i] - 48) + (res * 10);
 		i++;
 	}
 	return (res * menoss);

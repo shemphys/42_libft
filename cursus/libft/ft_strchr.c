@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *str, int ch)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -23,5 +23,7 @@ char	*ft_strchr(const char *str, int ch)
 			return (&((char *)str)[i]);//aquí devolvemos la primera coincidencia
 		i++;
 	}
-	return ((char *)(str + i));//esta posición lleva al '\0'
+	if (ch == '\0')
+		return ((char *)(str + i));
+	return (NULL);//esta posición lleva al '\0'
 }

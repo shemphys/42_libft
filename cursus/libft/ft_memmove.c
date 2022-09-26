@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-		i = n;//no puedo hacer comparaciones en las que un size_t sea menor que 0.
+		i = n;//no puedo hacer comparaciones en las que un size_t sea < 0.
 		while (i > 0)
 		{
 			i--;//lo resto antes porque tengo que usar 0
@@ -35,7 +35,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	}
 	return ((void *)dest);
-}
+}*/
 /*
 #include <string.h>
 int	main(void)
@@ -45,3 +45,29 @@ int	main(void)
 	to[30] = 'a';
 	memcpy(to, from, 60);
 }*/
+/*void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	unsigned char		*destino;
+	unsigned const char	*source;
+
+	if (dest < src)//no comprendo este if xD porque está comparando 2 posiciones
+		return (ft_memcpy(dest, src, n));
+	destino = (unsigned char *)dest;
+	source = (unsigned const char *)src;
+	while (n--)//no cogemos la última posición por ser el '\0'
+		destino[n] = source[n];
+	return (dest);
+}*/
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	unsigned char		*destino;
+	unsigned const char	*source;
+
+	if (dest < src)//no comprendo este if xD porque está comparando 2 posiciones
+		return (ft_memcpy(dest, src, n));
+	destino = (unsigned char *)dest;
+	source = (unsigned const char *)src;
+	while (n-- && destino != '\0')//no cogemos la última posición por ser el '\0'
+		destino[n] = source[n];
+	return (dest);
+}
