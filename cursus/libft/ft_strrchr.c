@@ -13,13 +13,16 @@
 #include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
-{
-	size_t	i = ft_strlen(str);
-
+{//hay que castear c como un char, sino da error porque no itera dentro de la rueda char.
+	size_t	i;
+	
+	i = ft_strlen(str);
+	if (str[i] == (char)c)
+		return (&((char *)str)[i]);
 	while (i > 0)
 	{
 		i--;
-		if (((char *)str)[i] == c)
+		if (((char *)str)[i] == (char)c)
 			return (&((char *)str)[i]);
 	}
 	return (NULL);//devuelve nulo.
