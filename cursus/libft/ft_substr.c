@@ -5,17 +5,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char 	*dest;
-//char a[]="lorem ipsum dolor sit amet";
-//char b[]="lorem ipsu";
-//char c[] = "";
+
 	i = 0;
-	if (!s)//protegiendo el malloc
+	if (len <= (size_t)ft_strlen(s))
+		dest = malloc(sizeof(char) * (len + 1));
+	else
+		dest = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!dest)
 		return (NULL);
-	dest = (char *)malloc(sizeof(char) * len);
-	while (i < len && s[start + i] != '\0')
+	while (i < len && s[start + i] != '\0' && (size_t)start <= ft_strlen(s))
 	{
 		dest[i] = s[start + i];
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
