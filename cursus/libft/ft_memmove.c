@@ -67,7 +67,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (ft_memcpy(dest, src, n));
 	destino = (unsigned char *)dest;
 	source = (unsigned const char *)src;
-	while (n-- && destino != '\0')//no cogemos la última posición por ser el '\0'
+	if (!destino)
+		return (NULL);
+	while (n--)//no cogemos la última posición por ser el '\0'
 		destino[n] = source[n];
 	return (dest);
 }
