@@ -39,6 +39,8 @@ int	    ft_atoi(const char *str);//repasar atoi porque no me da igual. Comentari
 void    *ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char    *ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
 
 /* FALTA USAR EL LIBFT TESTER */
 /* BORRAR TODOS LOS COMENTARIOS */
