@@ -90,7 +90,7 @@ char	**ft_split(char const *s, char c)
 */
 //////////////////////////////////////////////////////////////////////////////////////
 
-static size_t	ft_wordcount(char const *s, char c)//size of the **
+size_t	ft_wordcount(char const *s, char c)//size of the **
 {
 	size_t	i;
 
@@ -104,7 +104,7 @@ static size_t	ft_wordcount(char const *s, char c)//size of the **
 	return (i);
 }
 
-static size_t	*ft_wordlen(char const *s, char c)
+size_t	*ft_wordlen(char const *s, char c)
 {
 	size_t	i;
 	
