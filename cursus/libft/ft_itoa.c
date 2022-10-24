@@ -32,7 +32,7 @@ char	*ft_itoa(int n)
 
 	i = ft_numbersize(n);
 	aux = ft_abs((long)n);
-	x = (char *)malloc(sizeof(char *) * (i + 1));
+	x = (char *)malloc(sizeof(char) * (i + 1));
 	if (!x)
 		return (NULL);
 	x[i--] = '\0';
