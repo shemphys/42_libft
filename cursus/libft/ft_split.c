@@ -137,10 +137,14 @@ char	*ft_word(char const *s, char c)//le paso un puntero a la posición 0 de la 
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
+	size_t	x;
 	char	**words;
 
 	i = 0;
-	words = malloc(sizeof(char **) * (ft_wordcount(s, c) + 1));
+	x = ft_wordcount(s, c);
+	if (x == 0)//es decir, si no hay coincidencias
+		x = ft_strlen(s);
+	words = malloc(sizeof(char **) * (x + 1));
 	if (!words)
 		return (NULL);
 	while (*s)
