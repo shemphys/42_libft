@@ -103,9 +103,12 @@ size_t	ft_wordcount(char const *s, char c)//size of the **
 	i = 0;
 	while (*s)
 	{
-		if (*s == c)
+		while(*s && *s == c)
+			s++;
+		if (*s)
 			i++;
-		s++;
+		while (*s && *s != c)
+			s++;
 	}
 	return (i);
 }
@@ -143,14 +146,12 @@ char	*ft_word(char const *s, char c)//le paso un puntero a la posición 0 de la 
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
-	size_t	x;
 	char	**words;
 
 	i = 0;
-	x = ft_wordcount(s, c);
-	if (x == 0)//es decir, si no hay coincidencias
-		x = ft_strlen(s);
-	words = malloc(sizeof(char *) * (x + 1));
+	if (!s)
+		return (NULL);
+	words = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
 	if (!words)
 		return (NULL);
 	while (*s)
@@ -162,6 +163,6 @@ char	**ft_split(char const *s, char c)
 		while (*s != c && *s)
 			s++;
 	}
-	words[i] = 0;
+	words[i] = NULL;
 	return (words);
 }
