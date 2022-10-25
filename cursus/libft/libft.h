@@ -12,8 +12,9 @@
 
 #ifndef LIBFT_H//include guard (https://en.wikipedia.org/wiki/Include_guard)
 # define LIBFT_H
-# include <string.h>//pal size_t
+
 # include <stdlib.h>//pal malloc
+# include <unistd.h>//pal write?????????????
 
 int		ft_isalpha(int c);//falta quitar comentarios
 int		ft_isdigit(int c);//comentarios
@@ -43,9 +44,11 @@ char    *ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void    ft_striteri(char *s, void (*f)(unsigned int, char *));
-
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 
 /* FALTA USAR EL LIBFT TESTER */
