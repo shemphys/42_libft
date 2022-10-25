@@ -14,6 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s || !fd)
-	write(fd, &s, ft_strlen(s));
+	write(fd, s, ft_strlen(s));//si solo fuese 1 caracter usaría &s
 }
