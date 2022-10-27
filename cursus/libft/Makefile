@@ -13,20 +13,34 @@ SRC = ft_atoi.c\
 			ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c\
 			ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c\
 			ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
+			ft_putnbr_fd.c\
+
+BONUS = ft_lstnew_bonus.c\
 
 OBJS = $(SRC:.c=.o)
+
+OBJS_BONUS = $(SRC_B:.c=.o)
+
+
 
 all: $(NAME)#aquí podría poner libft.a y quitar la variable NAME
 
 $(NAME): $(OBJS)
-	ar crs $(NAME) $(OBJS)
+	@ar crs $(NAME) $(OBJS)
 
 clean:#solo borra los .o
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS)
 
 fclean: clean#borra todo, incluido el libft.a
-	$(RM) $(NAME)
+	@rm -f $(NAME)
 
-re: clean all
+re: fclean all
 
-.PHONY: all re clean fclean
+bonus:
+		@make SRC='$(SRC) $(BONUS)'
+
+re: fclean bonus
+
+rebonus: fclean bonus
+
+.PHONY: all re clean fclean bonus
