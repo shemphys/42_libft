@@ -2,6 +2,7 @@ NAME = libft.a
 
 CC = gcc
 CFLAGS = -Werror -Wall -Wextra
+AR = ar rcs
 RM = rm -rf
 
 SRC = ft_atoi.c\
@@ -29,12 +30,12 @@ $(NAME): $(OBJS)
 	@ar crs $(NAME) $(OBJS)
 
 clean:#solo borra los .o
-	@$(RM) $(OBJS)
+	@$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean: clean#borra todo, incluido el libft.a
-	@rm -f $(NAME)
+	@$(RM) $(NAME)
 
-re: fclean all
+re: clean all
 
 bonus:
 		@make SRC='$(SRC) $(BONUS)'

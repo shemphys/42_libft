@@ -1,22 +1,21 @@
 #include "libft.h"
-
-long	ft_abs(long n)
-{
-	if (n < 0)
-		return (-n);
-	return (n);
-}
+#include <stdio.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long  aux;
-
-	aux = ft_abs(n);
-	if (n < 0)
-		write(fd, "-", 1);
-	while (aux >= 0)
+	long aux;
+	aux = n;
+	if (aux < 0)
 	{
-		ft_putchar_fd((aux%10 - 48 + '0'), fd);
-		aux /= 10;
+		ft_putchar_fd('-', fd);
+		aux = -aux; 
 	}
+	else
+		aux = n;
+	if (aux > 9)
+	{
+		ft_putnbr_fd(aux / 10, fd);
+		aux %= 10;
+	}
+	ft_putchar_fd(aux + '0', fd);
 }
