@@ -50,13 +50,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-
-
-/* FALTA USAR EL LIBFT TESTER */
-/* BORRAR TODOS LOS COMENTARIOS */
-/* volver a pasar norminette */
-/* checkear que todo se llame ft_ */
 
 typedef struct 		s_list
 {
@@ -64,5 +57,5 @@ typedef struct 		s_list
 	struct s_list	*next;
 }					t_list;
 
-t_list	*ft_lstnew(void *content);
+t_list	*ft_lstnew_bonus(void *content);
 #endif
