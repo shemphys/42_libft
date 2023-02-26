@@ -18,11 +18,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-/*
-#include <ctype.h>
-int	main(void)
-{
-	char a = 122;
-	int x = isalnum(a);
-	int y = ft_isalnum(a);
-}*/

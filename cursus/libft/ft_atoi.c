@@ -37,16 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * menoss);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(void)
-{
-	char a[] = "-999999999999999999";//aquí falla mi función xd
-	char b[] = "9223372036854775807";
-	int y = ft_atoi(b);
-	int x = atoi(b);
-}
-*/

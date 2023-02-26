@@ -19,11 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-/*
-#include <ctype.h>
-int	main(void)
-{
-	char a = 42;
-	int x = isprint(a);
-	int y = ft_isprint(a);
-}*/

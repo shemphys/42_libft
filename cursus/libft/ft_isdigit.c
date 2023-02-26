@@ -18,12 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-/*
-#include <ctype.h>
-#include <stdio.h>
-int main(void)
-{
-	char a = '9';
-	int x = isdigit(a);
-	int y = ft_isdigit(a);
-}*/

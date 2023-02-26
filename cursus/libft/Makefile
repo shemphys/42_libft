@@ -24,15 +24,15 @@ OBJS_BONUS = $(SRC_B:.c=.o)
 
 
 
-all: $(NAME)#aquí podría poner libft.a y quitar la variable NAME
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	@ar crs $(NAME) $(OBJS)
 
-clean:#solo borra los .o
+clean:
 	@$(RM) $(OBJS) $(OBJS_BONUS)
 
-fclean: clean#borra todo, incluido el libft.a
+fclean: clean
 	@$(RM) $(NAME)
 
 re: clean all

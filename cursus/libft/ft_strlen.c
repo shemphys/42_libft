@@ -21,11 +21,3 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-/*
-#include <string.h>
-int	main(void)
-{
-	char a[10] = "abc\0d";
-	int x = strlen(a);
-	int y = ft_strlen(a);
-}*/

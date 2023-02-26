@@ -18,11 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-/*
-#include <ctype.h>
-#include <stdio.h>
-int main ()
-{
-	char a = 'a';
-	int x = isalpha(a);
-}*/

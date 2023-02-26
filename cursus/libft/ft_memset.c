@@ -24,15 +24,3 @@ void	*ft_memset(void *to, int ch, unsigned int n)
 	}
 	return (to);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int main(void)
-{
-	char    a[10];
-	char	b[10];
-
-	ft_memset(b, '1', 5);
-	memset(a, '2', 5);
-}
-*/

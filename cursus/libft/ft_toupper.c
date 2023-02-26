@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int	ft_toupper(int c)//solo 1 char a su mayus
+int	ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)//solo las minus
-		c -= 32;//y las pasamos a mayus
+	if (c >= 97 && c <= 122)
+		c -= 32;
 	return (c);
 }

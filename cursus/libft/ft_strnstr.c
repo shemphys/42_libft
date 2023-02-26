@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t	i;//contador para haystack
-	size_t	j;//contador para needle
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (needle[0] == '\0')
@@ -30,7 +30,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			else
 				break;
 		}
-		if (j == ft_strlen(needle))//quiere decir que ha iterado hasta el '\0' por lo tanto no tengo que restar 1 al ft_strlen
+		if (j == ft_strlen(needle))
 			return ((char *)&haystack[i]);
 		i++;
 	}

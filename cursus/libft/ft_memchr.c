@@ -22,8 +22,8 @@ void *ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (str[i] == (unsigned char)c) 
-			return (&str[i]);//no puedo modificar el valor de s como tal porque es un const void
-		i++;								//tampoco puedo return it, cuz void* functions don't return const nor volatile.
+			return (&str[i]);
+		i++;
 	}
 	return (0);
 }
