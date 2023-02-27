@@ -13,7 +13,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		n_item = ft_lstnew(f(lst->content));
 		if (n_item == NULL)
 		{
-			ft_lstclear(&n_lst, n_item);
+			ft_lstclear(&n_lst, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&n_lst, n_item)
