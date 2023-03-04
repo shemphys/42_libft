@@ -20,9 +20,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		return ;
 	while (*lst != NULL)
 	{
-		aux = *lst->next;
-		ft_lstdelone(*lst);
-		*lst = aux;
+		//aux = *lst->next;
+		aux.next = *lst;
+		ft_lstdelone(*lst, del);
+		*lst = &aux;
 	}
 	*lst = NULL;
 }
