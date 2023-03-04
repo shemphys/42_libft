@@ -29,7 +29,6 @@ int	ft_atoi(const char *str)
 			menoss = -1;
 		i++;
 	}
-	
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res = (str[i] - 48) + (res * 10);

@@ -1,12 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mparedes <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/04 18:41:47 by mparedes          #+#    #+#             */
+/*   Updated: 2023/03/04 18:41:51 by mparedes         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {
 	int	i;
+
 	i = 0;
 	while (lst != NULL)
 	{
-		lst = lst.next;//probablemente haiga que poner una flecha en vez de un punto pero asín checkeo hehe
+		lst = lst->next;
 		i++;
 	}
 	return (i);

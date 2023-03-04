@@ -1,14 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mparedes <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/04 18:44:12 by mparedes          #+#    #+#             */
+/*   Updated: 2023/03/04 18:44:15 by mparedes         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long aux;
+	long	aux;
+
 	aux = n;
 	if (aux < 0)
 	{
 		ft_putchar_fd('-', fd);
-		aux = -aux; 
+		aux = -aux;
 	}
 	else
 		aux = n;

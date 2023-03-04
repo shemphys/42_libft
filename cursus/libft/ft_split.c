@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-size_t	ft_wordcount(char const *s, char c)//size of the **
+size_t	ft_wordcount(char const *s, char c)
 {
 	size_t	i;
 
 	i = 0;
 	while (*s)
 	{
-		while(*s && *s == c)
+		while (*s && *s == c)
 			s++;
 		if (*s)
 			i++;
@@ -32,14 +32,14 @@ size_t	ft_wordcount(char const *s, char c)//size of the **
 size_t	ft_wordlen(char const *s, char c)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (s[i] != '\0' && s[i] != c)
 		i++;
 	return (i);
 }
 
-char	*ft_word(char const *s, char c)//le paso un puntero a la posición 0 de la palabra
+char	*ft_word(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -53,7 +53,7 @@ char	*ft_word(char const *s, char c)//le paso un puntero a la posición 0 de la 
 	while (i < j)
 	{
 		word[i] = s[i];
-		i++; 
+		i++;
 	}
 	word[i] = '\0';
 	return (word);
@@ -82,3 +82,7 @@ char	**ft_split(char const *s, char c)
 	words[i] = NULL;
 	return (words);
 }
+/*
+//size of the **
+//le paso un puntero a la posición 0 de la palabra
+*/
