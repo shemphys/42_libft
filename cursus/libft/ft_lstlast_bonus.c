@@ -22,3 +22,7 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (lst);
 }
+/*
+	Returns the pointer of the last node of the list.
+	The one which next is pointing to NULL.
+*/

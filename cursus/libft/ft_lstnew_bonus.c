@@ -23,3 +23,10 @@ t_list	*ft_lstnew(void *content)
 	list->next = NULL;
 	return (list);
 }
+/*	
+	New linked list head node. Cuz it's a head, no nodes behind
+	then no its next may point NULL.
+
+	Or it just create a node? I guess it's a head of an empty linked list
+	and cannot be used to create body nodes.
+*/

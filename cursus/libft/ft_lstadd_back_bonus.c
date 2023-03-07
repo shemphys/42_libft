@@ -20,10 +20,18 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 	else
 	{
-		ft_lstlast(*lst);
+		aux = ft_lstlast(*lst);
+		//(*lst)->next = new;
+		//new->next = NULL;
 	}
 }
 /*
+	
+	----------------------------------
+	ft_lstlast me devuelve el último nodo de la lista enlazada lst.
+	ese último nodo, tengo que hacer que apunte al nodo new.
+	el new ahora tendrá que apuntar a NULL.
+
 	t_list *aux; //necesito un auxiliar que apunte
 	Yo no sé qué va detrás del nodo new, puede quedar abierto 
 	y que haya metido una lista gigantesca

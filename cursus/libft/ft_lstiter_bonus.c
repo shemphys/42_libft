@@ -21,6 +21,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	}
 }
 /*
-	He visto a compañeros que aquí usan un aux y trabajan sobre ella
-	no sé por qué no iba a trabajar sobre la propia lista...
+	Should I use some aux variable?
+
+	I'm applying function "f" to all the nodes of a list.
 */

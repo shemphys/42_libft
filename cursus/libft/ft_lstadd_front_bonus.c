@@ -17,3 +17,9 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
+/*
+	Adding new node before the one we pass.
+	If the node was head, the new one will become head.
+
+	I don't get why the double pointer is needed here...
+*/
