@@ -14,19 +14,21 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	//t_list	*aux;
+	t_list	*aux;
 
 	if (*lst == NULL)
 		*lst = new;
 	else
 	{
 		aux = ft_lstlast(*lst);
-		//(*lst)->next = new;
-		//new->next = NULL;
+		aux->next = new;
 	}
 }
 /*
-	
+	uso *aux para almacenar el puntero que apunta al último elemento de lst
+	y luego hago que ese puntero auxiliar que es ahora el último nodo de la lista
+	en vez de apuntar a NULL (creo, no sé si apunta a NULL o al previo a NULL)
+	apunte a el nodo "new".
 	----------------------------------
 	ft_lstlast me devuelve el último nodo de la lista enlazada lst.
 	ese último nodo, tengo que hacer que apunte al nodo new.
