@@ -42,3 +42,11 @@ ESTUDIAR
 regreso de freeze
 ***********************
 makigas.es para aprender de estrucutars de C
+
+***********TESTERS***********
+paco --strict
+	substr
+	split
+
+Tripouille
+	calloc

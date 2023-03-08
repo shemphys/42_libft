@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//me dice cuántas palabras tengo
 size_t	ft_wordcount(char const *s, char c)
 {
 	size_t	i;
@@ -28,7 +28,7 @@ size_t	ft_wordcount(char const *s, char c)
 	}
 	return (i);
 }
-
+//mide el tamaño de la palabra que estemos revisando en ese momento
 size_t	ft_wordlen(char const *s, char c)
 {
 	size_t	i;
@@ -38,7 +38,7 @@ size_t	ft_wordlen(char const *s, char c)
 		i++;
 	return (i);
 }
-
+//crea un puntero que apunta a una dirección de memoria creada a medida para la palabra en cuestión
 char	*ft_word(char const *s, char c)
 {
 	size_t	i;
@@ -58,7 +58,7 @@ char	*ft_word(char const *s, char c)
 	word[i] = '\0';
 	return (word);
 }
-
+//creo un puntero con espacios de memoria reservados para tantos punteros como palabras tenga. Termina en un puntero nulo.
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
@@ -75,7 +75,7 @@ char	**ft_split(char const *s, char c)
 		while (*s == c && *s)
 			s++;
 		if (*s)
-			words[i++] = ft_word(s, c);
+			words[i++] = ft_word(s, c);//tengo apuntada cada palabra por un puntero que apunta al char array
 		while (*s != c && *s)
 			s++;
 	}
@@ -83,6 +83,6 @@ char	**ft_split(char const *s, char c)
 	return (words);
 }
 /*
-//size of the **
-//le paso un puntero a la posición 0 de la palabra
+	size of the **
+	le paso un puntero a la posición 0 de la palabra
 */
