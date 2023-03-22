@@ -1,3 +1,89 @@
+████████████████████████████████████████████████████████████████████████████
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ Explicación funciones ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+████████████████████████████████████████████████████████████████████████████
+
+╔isalpha╗
+	int	ft_isalpha(int c)
+	recibe un número entero y te dice (return) si es una letra del
+	abecedario (1) o no (0).
+
+╔isdigit╗
+	int	ft_isdigit(int c)
+	recibe un integer y te dice si es un número del 0 al 9.
+
+╔isalnum╗
+	int	ft_isalnum(int c)
+	recibe un integer. return 1 si es un número [0, 9] o una letra (mayus o minus).
+	return 0 si no es nah de eso.
+
+╔isascii╗
+	int	ft_isascii(int c)
+	recibe un integer. si es un caracter ASCII (control + imprimibles) [0, 127].
+
+╔isprint╗
+	int	ft_isprint(int c)
+	Si es un caracter imprimible [32,126], return 1. Else return 0.
+
+╔strlen╗
+	size_t	ft_strlen(const char *str)
+	Recibe un puntero que apunta a una dirección de memoria que no podrá ser modificada (al menos no por esta función)
+	Normalmente la voy a usar con una string/char array cualquiera, no necesariamente tiene que ser const.
+	Me va a decir cuántos char tiene esa str.
+	0 si el primer caracter es NULL, 1 si el NULL está en la segunda posición.
+	
+╔memset╗
+	void	*ft_memset(void *to, int ch, unsigned int n)
+	Copia en "to" el char "ch". Para ello, casteo momentáneamente "to" como un unsigned char y paso "ch" como el integer que es.
+	devuelvo el puntero "to" que es un tipo void.
+
+╔bzero╗
+
+memcpymemmove
+strcpy
+strlcat
+toupper
+tolower
+strchr
+strrchr
+strncmp
+memchr
+memcpymemmovestrnstr
+atoi
+
+calloc
+strdup
+
+(Apoyarme en el pdf de la libft a partir de aquí)
+ft_substr
+ft_strjoin
+ft_strtrim
+ft_split
+ft_itoa
+ft_strmapi
+ft_striteri
+ft_putchar_fd
+ft_putstr_fd
+ft_putendl_fd
+ft_putnbr_fd
+
+(BONUS SIN HACER WEY)
+
+████████████████████████████████████████████████████████████████████████████
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ AQUÍ LAS NOTAS ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+████████████████████████████████████████████████████████████████████████████
+
+*_* "const" implica que no se puede modificar el valor de esa variable/puntero
+
+!! Si a una función que pide como parámetro un int le pasas una dirección
+	de memoria donde hay char, lo interpretará como deba xD
+
+* No sé cómo funcionan los .h: ¿por qué no hace falta compilarlos para que funcionen?
+	porque en el makefile no está y va todo dpm
+	Supongo que no hace falta compilarlo porque es un "header" dice Jorge (jescuder)
+		y no tengo ni papa de cómo funcionan los header xD
+
+
+
 https://www.equestionanswers.com/c/memcpy-vs-memmove.php
 MEMCPY
 	el problema viene cuando intentas copiar un trozo de una str en sí misma
