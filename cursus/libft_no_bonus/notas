@@ -37,9 +37,33 @@
 	devuelvo el puntero "to" que es un tipo void.
 
 ╔bzero╗
+	void	ft_bzero(void *s, size_t n)
+	en un puntero void, añado tantos nulos como me indique el segundo parámetro.
+	para guardar el nulo en la memoria, casteo momentáneamente "s" como un char para que interprete bien el nulo '\0'
 
-memcpymemmove
-strcpy
+╔memcpy╗
+	void	*ft_memcpy(void *to, const void *from, size_t n)
+	Como los dos punteros están en void, los casteo momentáneamente a unsigned char para poder copiar bien la info de uno en otro.
+	y copio "n" caracteres de tamaño "unsigned char" de "from" en "to"
+	OJO: puedes pasarte de rosca y meter más caracteres en la memoria de "to" de la que hay asignada y eso es movida.
+
+╔memmove╗
+	void	*ft_memmove(void *dest, const void *src, size_t n)
+	para castear el puntero tengo que añadir un paréntesis que englobe al puntero void (tanto "dest" como a "src")
+	porque sino, peta. EN MI OPINIÓN creo que busca primero una posición tipo void y luego intenta leerla como unsigned char.
+	y ahí es donde explota. Porque coge 1bit (que creo que mide un dato tipo void) y luego intenta leerlo como si
+	fuese un char, que mide 4bytes. booom.
+	
+	memmove vs memcpy: memmove avoids overlapping. ETO khé e wey?! memmove just handles situations in which the user
+	gives the same string to be copied in itself, error (overlapping) may occur when you try to copy str into str+2
+	using memcpy.
+
+	OJO: puedes pasarte de rosca y meter más caracteres en la memoria de "to" de la que hay asignada y eso es movida.
+
+╔strlcpy╗
+	size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+
+
 strlcat
 toupper
 tolower
@@ -57,7 +81,17 @@ strdup
 ft_substr
 ft_strjoin
 ft_strtrim
-ft_split
+╔ft_split╗
+	//me dice cuántas palabras tengo
+	//mide el tamaño de la palabra que estemos revisando en ese momento
+	//crea un puntero que apunta a una dirección de memoria creada a medida para la palabra en cuestión
+	//creo un puntero con espacios de memoria reservados para tantos punteros como palabras tenga. Termina en un puntero nulo.
+		//tengo apuntada cada palabra por un puntero que apunta al char array
+	/*
+		size of the **
+		le paso un puntero a la posición 0 de la palabra
+	*/
+
 ft_itoa
 ft_strmapi
 ft_striteri

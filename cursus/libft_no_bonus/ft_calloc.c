@@ -18,23 +18,10 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	max_value;
 
 	max_value = -1;
-	if (size > 0 && count > max_value/size)
+	if (size > 0 && count > max_value / size)
 		return (0);
-
 	result = malloc(count * size);
 	if (result)
 		ft_bzero(result, (count * size));
 	return (result);
 }
-/*void	*ft_calloc(size_t count, size_t size)
-{
-	void	*result;
-
-	result = malloc(count * size);
-	if (!result)
-		return (NULL);
-	ft_bzero(result, (count * size));
-	return (result);
-}
-//tiene 0 posiciones (nmemb=0 || size=0) pues devuelvo un puntero a NULL
-*/
