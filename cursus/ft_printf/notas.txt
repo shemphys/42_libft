@@ -1,0 +1,40 @@
+va_start, va_arg, va_copy, va_end  
+	https://www.tutorialspoint.com/c_standard_library/c_macro_va_start.htm
+	https://learn.microsoft.com/es-es/cpp/c-runtime-library/reference/va-arg-va-copy-va-end-va-start?view=msvc-170
+	(creo que son listas enlazadas)
+
+	Se utilizan cuando la función puede tomar un número variable de argumentos.
+	Suponen que la función:
+		1. toma un número fijo de argumentos necesarios
+		2. seguido de un número variable de argumentos opcionales.
+	
+	va_start
+		inicia las listas enlazadas
+	va_arg
+		permite iterar por la lista de argumentos
+		
+
+
+
+DISEÑO
+cspdiuxX %
+	c		-> char (carcteres ASCII)
+	s		-> string / char array
+	d == i 	-> signedNum
+	u 		-> unsignedNum
+	//l		-> long, usado lu o ld o lc (si pasamos a UNICODE)
+
+1. el usuario puede utilizar un número "ilimitado" de argumentos
+	- limitado por el tamaño del tipo de variable
+2. tiene 2 grupos de argumentos
+	1. ("texto y %x %y", x, y) -> text y llamadas por un lado, variables por otro. 
+
+un bucle para repasar los argumentos
+un menú para acceder a todas las funciones.
+
+
+**curiosidades**
+	int sum(int num_args, ...)
+		permite ingresar un número variable de argumentos, todos int
+
+

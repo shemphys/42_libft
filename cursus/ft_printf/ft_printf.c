@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mparedes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/24 06:25:26 by mparedes          #+#    #+#             */
-/*   Updated: 2023/03/24 06:25:28 by mparedes         ###   ########.fr       */
+/*   Created: 2023/03/24 07:55:50 by mparedes          #+#    #+#             */
+/*   Updated: 2023/03/24 07:55:53 by mparedes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINFT_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
+int	ft_printf(char const *str, ...)
+{
+	int val = 0;
+	va_list ap;
+	int i;
 
-int	ft_printf(char const *, ...);
+	va_start(ap, str);
+   	for(i = 0; i < str; i++) {
+		val += va_arg(ap, int);
+   	}
+   	va_end(ap);
 
-#endif
+	return val;
+}
