@@ -29,7 +29,7 @@ cspdiuxX %
 2. tiene 2 grupos de argumentos
 	1. ("texto y %x %y", x, y) -> text y llamadas por un lado, variables por otro. 
 
-un bucle para repasar los argumentos
+un bucle para repasar los argumentos ESTO NO SÉ CÓMO HACERLO
 un menú para acceder a todas las funciones.
 
 
