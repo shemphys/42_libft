@@ -29,8 +29,15 @@ cspdiuxX %
 2. tiene 2 grupos de argumentos
 	1. ("texto y %x %y", x, y) -> text y llamadas por un lado, variables por otro. 
 
-un bucle para repasar los argumentos ESTO NO SÉ CÓMO HACERLO
+un bucle para repasar los argumentos
+	EL PRIMER ARGUMENTO debe ser siembre una cadena de texto.
 un menú para acceder a todas las funciones.
+
+Marina, la chica a la que corregí el printf, me dijo que printf usaba mucho los int
+x = "hola";
+int y = write(1, x, 2);
+//y valdrá 2.
+
 
 
 **curiosidades**

@@ -14,15 +14,5 @@
 
 int	ft_printf(char const *str, ...)
 {
-	int val = 0;
-	va_list ap;
-	int i;
-
-	va_start(ap, str);
-   	for(i = 0; i < str; i++) {
-		val += va_arg(ap, int);
-   	}
-   	va_end(ap);
-
-	return val;
+	
 }
