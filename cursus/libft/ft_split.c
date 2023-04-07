@@ -82,7 +82,3 @@ char	**ft_split(char const *s, char c)
 	words[i] = NULL;
 	return (words);
 }
-/*
-//size of the **
-//le paso un puntero a la posición 0 de la palabra
-*/
